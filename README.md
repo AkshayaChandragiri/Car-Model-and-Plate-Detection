@@ -19,7 +19,7 @@ The system works in three main stages:
    - Cropped vehicle images are passed to a ResNet50-based CNN.
    - Predicts the exact car make and model.
 
-## 🧠 Technologies Used
+## Technologies Used
 
 - Python
 - YOLOv5
@@ -28,8 +28,11 @@ The system works in three main stages:
 - OpenCV
 - PyTorch
 
+# Yolov5
+“YOLOv5 is used as the object detection backbone and should be cloned separately from the official Ultralytics repository.”
 
-## 📂 Project Structure
+
+## Project Structure
 Car-Model-and-Plate-Detection/
 │
 ├── main.py # Main pipeline script
@@ -53,7 +56,7 @@ Car-Model-and-Plate-Detection/
 │ └── output_sample.jpg # Sample output
 
 
-## ▶️ How to Run
+## How to Run
 
 ### Install dependencies
 pip install -r requirements.txt
