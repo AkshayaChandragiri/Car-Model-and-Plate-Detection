@@ -1,0 +1,20 @@
+import cv2
+import os
+
+# Step 1: Load the pre-trained Haar Cascade car detector
+car_cascade = cv2.CascadeClassifier('model/haarcascade_car.xml')
+
+# Step 2: Load an image from your images folder
+img = cv2.imread('images/car1.jpg')  # replace with your image file name
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# Step 3: Detect cars in the image
+cars = car_cascade.detectMultiScale(gray, 1.1, 1)
+
+# Step 4: Draw rectangles around detected cars
+for (x, y, w, h) in cars:
+    cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+# Step 5: Save the output to results folder
+cv2.imwrite('results/detected_car.jpg', img)
+print(" Car detection complete. Check 'results/detected_car.jpg'")
